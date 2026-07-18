@@ -2,10 +2,19 @@
 
 > Pick a template, adjust a few sliders, drop in your own content — get an embeddable animated showcase in minutes.
 
-<!-- ⬇︎ Put the demo video here (a 20–30s screen recording: switching presets, adjusting parameters, live preview).
-     Record it, save as demo.mp4, and drag it into the GitHub README editor to embed. Show the motion before the words. -->
+<!-- ⬇︎ DEMO VIDEO GOES HERE (hero — show the motion before the words).
+     GitHub does NOT embed a video from a committed file (`![](x.mp4)` renders as a broken
+     image, and <video> tags are stripped). A real player only appears when the file is
+     dragged into the GitHub web editor. To add it:
+       1. Open this README on github.com and click the pencil (Edit).
+       2. Drag the file  motion-studio-demo-1080p.mp4  onto the line below this comment —
+          GitHub uploads it and inserts a  https://github.com/user-attachments/assets/…  URL
+          that renders as an inline player.
+       3. Commit.
+     Until then this hero is intentionally empty. -->
 
-![demo](./demo.mp4)
+<!-- ↓ drop the demo mp4 on this line in the GitHub editor ↓ -->
+
 
 ---
 
@@ -42,22 +51,31 @@ The template answers "what form is this," the preset answers "what mood is this,
 
 ## Templates
 
-<!-- A small gif per template can be added later. -->
+Five templates, each with several presets. The clips below show each template's default preset (placeholder cards — drop in your own images to make it yours).
 
-- **orbit** — cards rotating around a center
-- **carousel** — an infinite marquee where cards flow along a line, with optional depth
-- **stack** — cards stacking, entering and exiting one by one
-- **band** — a masked marquee with a fisheye-like perspective
-- **coverflow** — cards arranged along an arc with a focused center (that Apple Music feel)
+### orbit — cards rotating around a center
+<img src="./assets/orbit.gif" alt="orbit template demo" width="360">
 
-## Interaction (in development, coming soon)
+### carousel — an infinite marquee where cards flow along a line, with optional depth
+<img src="./assets/carousel.gif" alt="carousel template demo" width="360">
 
-A set of interactive capabilities is being added so an exported piece isn't just autoplay — it can respond to the viewer:
+### stack — cards stacking, entering and exiting one by one
+<img src="./assets/stack.gif" alt="stack template demo" width="360">
 
-- **Drag / scroll** — visitors can push the timeline themselves; works with touch on mobile too
+### band — a masked marquee with a fisheye-like perspective
+<img src="./assets/band.gif" alt="band template demo" width="360">
+
+### coverflow — cards arranged along an arc with a focused center (that Apple Music feel)
+<img src="./assets/coverflow.gif" alt="coverflow template demo" width="360">
+
+## Interaction
+
+An exported piece isn't just autoplay — it can respond to the viewer. All optional (off by default), and live in both the editor and exported embeds:
+
+- **Drag / scroll / momentum** — visitors push the timeline themselves, with inertia on release; works with touch on mobile too
 - **Cursor response** — cards react to the pointer: drawn toward it, scaled up, or turning to face it like a head
 
-All optional — turn them off and it's pure autoplay.
+Turn them off and it's pure autoplay.
 
 ## Under the hood
 
@@ -72,7 +90,12 @@ For developers, and for future me:
 
 A personal project, in active development.
 
-Five templates are available today (orbit / carousel / stack / band / coverflow), each with several presets. Both the tool and the landing page are deployed. Export formats: embeddable HTML and scene JSON. Video (mp4) export is in development. Interaction features (drag / cursor response) are in development and coming soon.
+Five templates ship today (orbit / carousel / stack / band / coverflow), each with several presets. The tool and landing page are deployed. Interaction — drag / scroll / momentum and cursor response — is live in both the editor and exported embeds. Export formats: embeddable HTML and scene JSON; video (mp4) export is in development.
+
+Also available:
+
+- A machine-readable scene spec for AI agents — [for agent](https://ms-landing-one.vercel.app/for-agent.html) — so an agent can generate a valid, importable scene from a description.
+- A Cover Flow component submitted to the [Framer](https://www.framer.com/) marketplace (in review).
 
 This is a project built by a visual designer (who doesn't code) working with AI — concept, visual direction, and product decisions are human-led; engineering execution is handled by AI.
 
